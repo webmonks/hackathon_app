@@ -20,4 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  mongoid:
+    errors:
+      models:
+        project:
+          attributes:
+            name:
+              blank: 'Give a project some title'
+            description:
+              blank: 'Give a project some description'

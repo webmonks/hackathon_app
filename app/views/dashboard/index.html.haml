@@ -4,11 +4,13 @@
 %main
   .container
     - @projects.each do |project|
-      #title.col-md-3
+      #title.col-md-2
         .h3= project.name
-      #description.col-md-7
-        .h3= project.description
+      #description.col-md-6
+        .article
+          %p= project.description
       .col-md-2
         %article.btn-container
           %a.btn.btn-danger.btn-lg{:href => "#"} Vote
+      .col-md-2
 %footer

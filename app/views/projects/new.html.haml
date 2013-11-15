@@ -1,15 +1,15 @@
 .row-fluid
-  .span4.well
+  #form.span4.well
     = form_for @project, url: {action: "create"}, :html => {:class => "form-horizontal"} do |f|
       %fieldset
         %legend Project Form
         .control-group
           = f.label :name, :class => "control-label"
           .controls
-            = f.text_field :name, :class => "input-xlarge"
+            = f.text_field :name, :class => "text"
         .control-group
-          = f.label :description, :html => {:class => "textform"}
+          = f.label :description, :html => {:class => "text"}
           .controls
-            = f.text_field :description, :html => {:class => "textform"}
+            = f.text_field :description, :html => {:class => "text"}
         .form-actions
           = f.submit :class => "btn btn-primary"

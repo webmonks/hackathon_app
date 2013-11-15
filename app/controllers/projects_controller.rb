@@ -17,7 +17,10 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.save
         format.html {redirect_to root_path, notice: 'New project was created.' }
+        format.json { render action: 'show', status: :created, location: @event }
       else
+        format.html { render action: 'new' }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
     end
   end
 end
