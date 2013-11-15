@@ -4,9 +4,9 @@
 %main
   .container
     - @projects.each do |project|
-      .col-md-2
+      #title.col-md-3
         .h3= project.name
-      .col-md-8
+      #description.col-md-7
         .h3= project.description
       .col-md-2
         %article.btn-container

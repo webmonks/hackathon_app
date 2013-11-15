@@ -1,25 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300);
+
+/* General settings*/
+
 body {
   font-family: 'proxima-nova';
+  padding: 30px 0;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'proxima-nova';
 }
+
+/* Main */
+
 .container {
   margin-top: 50px;
-  border-top: 1px solid #fe504f;
+  border-top: 2px solid #fe504f;
+
 }
 .content h3{
   display: inline-block;
 }
-.title {
+.title h1{
   text-align: center;
   color: #fe504f;
+  font-family: "Merriweather", serif;
 }
 
 .project {
   display: inline;
 }
+
+.col-md-2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#title {
+  text-align: left;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+#description {
+  text-align: left;
+  margin-top: 25px;
+}
+
+/*Buttons and other stuff*/
 
 .btn-container {
   display: block;
