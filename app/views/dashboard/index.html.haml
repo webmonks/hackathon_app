@@ -1,16 +1,25 @@
 %header
+.container
   .title
     %h1 Hackathon Rome
+  .container
+    .col-md-10
+      #project.h1 Projects
+    .col-md-2
+      #project.h1 Score
+  .border
 %main
   .container
+    .row
     - @projects.each do |project|
-      #title.col-md-2
+      #title.col-md-3
         .h3= project.name
-      #description.col-md-6
+      #description.col-md-5
         .article
-          %p= project.description
-      .col-md-2
+        %p= project.description
+      .col-md-3
         %article.btn-container
           %a.btn.btn-danger.btn-lg{:href => "#"} Vote
-      .col-md-2
 %footer
+
+

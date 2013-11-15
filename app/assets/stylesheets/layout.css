@@ -14,9 +14,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* Main */
 
 .container {
-  margin-top: 50px;
-  border-top: 2px solid #fe504f;
-
+  margin-top: 10px;
 }
 .content h3{
   display: inline-block;
@@ -31,22 +29,30 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: inline;
 }
 
-.col-md-2 {
-  text-align: center;
-  margin-top: 10px;
-}
-
 #title {
   text-align: left;
-  margin-top: 30px;
+
   text-transform: uppercase;
 }
 
 #description {
   text-align: left;
-  margin-top: 20px;
+
 }
 
+#project {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  color: #fe504f;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.border {
+  border: 1px solid #fe504f;
+  margin-bottom: 40px;
+}
 /*Buttons and forms*/
 
 .btn-container {
@@ -54,7 +60,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   float: left;
   width: 100%;
   height: 60px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 30px; }
 
 a.btn, button.btn {
