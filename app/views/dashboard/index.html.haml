@@ -1,0 +1,6 @@
+.container
+  .h1 Hackathon Rome Projects
+  .col-md-5
+  - @projects.each do |project|
+    .col-md-2= project.name
+    .col-md-3= project.description
