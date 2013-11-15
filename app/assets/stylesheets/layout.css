@@ -14,8 +14,43 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .title {
   text-align: center;
+  color: #fe504f;
 }
 
 .project {
   display: inline;
 }
+
+.btn-container {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 30px; }
+
+a.btn, button.btn {
+  color: #fe504f;
+  background-color: white;
+  border: 1px solid #fe504f;
+  padding: 15px 40px;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+  -moz-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+  -o-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+  -moz-box-shadow: 4px 4px 0px 0px #999999;
+  -webkit-box-shadow: 4px 4px 0px 0px #999999;
+  box-shadow: 3px 3px 0px 0px #fe504f; }
+a:hover.btn, button:hover.btn {
+  background-color: white;
+  color: #fe504f;
+  border: 1px solid #fe504f;
+  margin: 3px 0 0 3px;
+  -moz-box-shadow: 0 0 0 0 white;
+  -webkit-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white; }
