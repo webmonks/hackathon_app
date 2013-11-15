@@ -1,6 +1,21 @@
+body {
+  font-family: 'proxima-nova';
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'proxima-nova';
+}
 .container {
   margin-top: 50px;
+  border-top: 1px solid #fe504f;
+}
+.content h3{
+  display: inline-block;
+}
+.title {
   text-align: center;
 }
 
-
+.project {
+  display: inline;
+}
