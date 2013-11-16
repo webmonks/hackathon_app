@@ -12,6 +12,7 @@ gem 'jquery-ui-rails', '~> 4.0.5'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'haml-rails'
+gem 'angularjs-rails'
 
 
 group :development, :test do
