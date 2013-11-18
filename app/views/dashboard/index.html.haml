@@ -1,3 +1,5 @@
+!!!
+%html{"ng-app" => "HackathonApp"}/
 %header
 .container
   .title
@@ -19,7 +21,12 @@
         %p= project.description
       .col-md-3
         %article.btn-container
-          %a.btn.btn-danger.btn-lg{:href => "#"} Vote
+          %div{"ng-controller" => "ModalCtrl"}
+          %script{:id => "myModalContent.html", :type => "text/ng-template"}
+            %form{:name => "myForm", "ng-submit" => "submit()"}
+              %input{"ng-model" => "myInputValue", :type => "text"}
+                %button{:type => "submit"} Submit
+          %a.btn.btn-danger.btn-lg{"ng-click" => "open()"} Vote!
+          %div{"ng-show" => "selected"} Selection from a modal: {{ selected }}
 %footer
-
 
