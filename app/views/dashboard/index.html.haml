@@ -10,23 +10,17 @@
     .col-md-2
       #project.h1 Score
   .border
-%main
+%main{"ng-controller" => "MainCtrl"}
+  <pre>
+  {{projects | json}}
+  </pre>
   .container
-    .row
-    - @projects.each do |project|
-      #title.col-md-3
-        .h3= project.name
-      #description.col-md-5
-        .article
-        %p= project.description
-      .col-md-3
-        %article.btn-container
-          %div{"ng-controller" => "ModalCtrl"}
-            %script{:id => "myModalContent.html", :type => "text/ng-template"}
-              %form{:name => "myForm", "ng-submit" => "submit()"}
-                %input{"ng-model" => "myInputValue", :type => "text"}
-                  %button{:type => "submit"} Submit
-            %a.btn.btn-danger.btn-lg{"ng-click" => "open()"} Vote!
-            %div{"ng-show" => "selected"} Selection from a modal: {{ selected }}
+    .row{"ng-repeat" => "project in projects", "ng-controller" => "ProjectCtrl"}
+      %div{"ng-if" => "! isVoting"}
+        %button.btn.btn-link{"ng-click" => "vote(project.id)"} vote
+      %div{"ng-if" => "isVoting"}
+        %input{"ng-model" => "token"}
+        %button.btn.btn-link{"ng-click" => "submitVote(token)"} vote
+        %button.btn.btn-link{"ng-click" => "cancel()"} cancel
 %footer
 

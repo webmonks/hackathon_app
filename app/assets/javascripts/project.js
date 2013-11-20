@@ -1,27 +1,21 @@
-angular.module('HackathonApp', ['ui.bootstrap']);
+angular.module('HackathonApp', []);
 
-var ModalCtrl = function ModalCtrl($scope, $modal, $log) {
+var MainCtrl = function($scope) {
+  $scope.projects = window.projects;
+}
 
-  $scope.open = function () {
+var ProjectCtrl = function($scope) {
+  $scope.vote = function(project_id) {
+    alert(project_id);
+    $scope.isVoting = true;
+  }
 
-    var modalInstance = $modal.open({
-    templateUrl: 'myModalContent.html',
+  $scope.cancel = function(project_id) {
+    $scope.isVoting = false;
+  }
 
-      controller: ModalInstanceCtrl
-    });
+  $scope.submitVote = function(token) {
 
-  };
-};
+  }
+}
 
-var ModalInstanceCtrl = function ($scope, $modalInstance) {
-  console.log('ksjskjs');
-  $scope.submit = function () {
-
-    if($scope.myForm.$valid) {
-
-      $modalInstance.close($scope.selected.item);
-    }
-
-  };
-
-};
