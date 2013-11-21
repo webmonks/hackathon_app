@@ -19,6 +19,6 @@
           %button.btn.btn-link{"ng-click" => "vote(project.id)"} vote
         %div{ "ng-if" => "isVoting"}
           %input{:type => "text", :placeholder => "Your token", "ng-model" => "token" }
-          %button.btn.btn-link{"ng-submit" => "submitVote()"} vote
+          %button.btn.btn-link{"ng-click" => "submitVote(token)"} vote
           %button.btn.btn-link{"ng-click" => "cancel()"} cancel
 %footer

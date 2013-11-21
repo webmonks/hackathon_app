@@ -14,7 +14,7 @@ var ProjectCtrl = function($scope) {
     $scope.isVoting = false;
   }
 
-  $scope.submitVote = function() {
+  $scope.submitVote = function(token) {
     console.log("This is working");
   }
 }

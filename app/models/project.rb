@@ -5,4 +5,7 @@ class Project
   field :description,       type: String
 
   validates_presence_of :name, :description
+
+  has_many :tokens
+
 end
