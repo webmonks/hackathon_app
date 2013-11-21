@@ -6,7 +6,7 @@ var MainCtrl = function($scope) {
 
 var ProjectCtrl = function($scope) {
   $scope.vote = function(project_id) {
-    alert(project_id);
+    // alert(project_id);
     $scope.isVoting = true;
   }
 
@@ -14,8 +14,8 @@ var ProjectCtrl = function($scope) {
     $scope.isVoting = false;
   }
 
-  $scope.submitVote = function(token) {
-
+  $scope.submitVote = function() {
+    console.log("This is working" + $scope.token);
   }
 }
 

@@ -5,22 +5,26 @@
   .title
     %h1 Hackathon Rome
   .container
-    .col-md-10
-      #project.h1 Projects
-    .col-md-2
-      #project.h1 Score
+    #project.h1 Projects
   .border
 %main{"ng-controller" => "MainCtrl"}
-  <pre>
-  {{projects | json}}
-  </pre>
   .container
     .row{"ng-repeat" => "project in projects", "ng-controller" => "ProjectCtrl"}
-      %div{"ng-if" => "! isVoting"}
-        %button.btn.btn-link{"ng-click" => "vote(project.id)"} vote
-      %div{"ng-if" => "isVoting"}
-        %input{"ng-model" => "token"}
-        %button.btn.btn-link{"ng-click" => "submitVote(token)"} vote
-        %button.btn.btn-link{"ng-click" => "cancel()"} cancel
+      .col-md-2
+        .h2 {{project.name}}
+      .col-md-5
+        .h2 {{project.description}}
+      .col-md-5
+        %div{"ng-if" => "! isVoting"}
+          %button.btn.btn-link{"ng-click" => "vote(project.id)"} vote
+        %div{ "ng-if" => "isVoting"}
+          %input{:type => "text", :placeholder => "Your token", "ng-model" => "token" }
+          %button.btn.btn-link{"ng-submit" => "submitVote(token)"} vote
+          %button.btn.btn-link{"ng-click" => "cancel()"} cancel
 %footer
 
+
+/ %div{"ng-controller" => "AppCtrl"}
+/   %form{"ng-submit" => "addItem()"}
+/     <input type="text" placeholer"item to add" ng-model="itemToAdd">
+/     %input{:type => "submit", :value => "add"}
