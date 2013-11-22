@@ -22,6 +22,17 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
     end
   end
+
+   def vote
+    @project = Project.find(params[:project_id])
+       if project.votes.where(:token_name).exists?
+         notice = 'You already voted'
+       else
+         project.votes.create(:token_name, :voted => true)
+         notice = 'Vote recorded'
+       end
+       redirect_to @project,  :method => :post
+    end
 end
 
   private

@@ -1,7 +1,12 @@
 HackathonApp::Application.routes.draw do
   root to: 'dashboard#index'
-  resources :projects
+  resources :projects do
+    member do
+      post 'vote'
+    end
+  end
   get '/hackproject' => 'projects#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
