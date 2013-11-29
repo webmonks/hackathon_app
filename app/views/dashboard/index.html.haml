@@ -8,14 +8,13 @@
     #project.h1 Projects
   .border
 %main
-- @projects.each do |project|
-  .container
-    .row
+  - @projects.each do |project|
+    .container
       .col-md-2
         .h2= project.name
-      #description.col-md-5
+      .col-md-5
         .h2= project.description
       .col-md-5
-        %button.btn.btn-link{:href => "#", :onclick => "alert('Hello world!'); return false;"} vote
+        %button.btn.btn-link{:href => "#"} vote
 %footer
 
