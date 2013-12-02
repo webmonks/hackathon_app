@@ -1,5 +1,3 @@
 jQuery( document ).ready(function($) {
-  $('button').click(function() {
-    var TokenName = prompt("Hey!Your token please!");
-  });
+   $('a[rel*=leanModal]').leanModal({ top : 200, closeButton: ".modal_close" });
 });

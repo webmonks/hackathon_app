@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @token = Token.all
   end
 
   def new
@@ -25,10 +26,10 @@ class ProjectsController < ApplicationController
 
    def vote
     @project = Project.find(params[:project_id])
-       if @project.votes.where(:token_name).exists?
+       if @project.votes.where(:token).exists?
          notice = 'You already voted'
        else
-         @project.votes.create(:token_name, :voted => true)
+         @project.votes.create(:token, :voted => true)
          notice = 'Vote recorded'
        end
        @project.tokens_count = @project.tokens.find_all { |c| c.voted == false} .count
