@@ -4,17 +4,16 @@
 .container
   .title
     %h1 Hackathon Rome
-  .container
-    #project.h1 Projects
   .border
 %main
-  - @projects.each do |project|
-    .container
-      .col-md-2
-        .h2= project.name
-      .col-md-5
-        .h2= project.description
-      .col-md-5
-        %button.btn.btn-link{:href => "#"} vote
+  .container
+    - @projects.each do |project|
+      .row
+        .col-md-2
+          .h2= project.name
+        .col-md-5
+          .h3= project.description
+        .col-md-5
+          %button.btn.btn-link{:href => "#"} vote
 %footer
 
