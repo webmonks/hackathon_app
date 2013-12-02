@@ -29,11 +29,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: inline;
 }
 
-#title {
-  text-align: left;
-
-  text-transform: uppercase;
-}
 .border {
   border: 1px solid #fe504f;
   margin-bottom: 40px;
@@ -46,7 +41,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   width: 100%;
   height: 60px;
   margin-top: 0px;
-  margin-bottom: 30px; }
+ }
 
 a.btn, button.btn {
   color: #fe504f;
@@ -61,7 +56,7 @@ a.btn, button.btn {
   text-decoration: none;
 }
 
-a.btn, button.btn:hover {
+.btn-link:hover {
   text-decoration: none;
   color: #fff;
   background-color: #fe504f;
@@ -82,8 +77,22 @@ width:100%;
 background: #000;
 display: none;
 }
-#test {
-width: 600px;
+#vote {
+width: 200px;
 display:none;
 background: #FFF;
+}
+
+.project-title{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.project-description{
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.vote-button {
+  margin-top: -15px;
 }

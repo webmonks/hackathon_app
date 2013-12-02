@@ -9,16 +9,15 @@
   .container
     - @projects.each do |project|
       .row
-        .col-md-2
-          .h3= project.name
-        .col-md-5
-          .h3= project.description
-        .col-md-5
-          %a.button.btn.btn-link{:href => "#test", :name => "test", :rel => "leanModal"}
+        .col-md-3
+          .project-title= project.name
+        .col-md-7
+          .project-description= project.description
+        .col-md-2.vote-button
+          %a.button.btn.btn-link{:href => "#vote", :name => "vote", :rel => "leanModal"}
             vote
-          #test
-            %form{:action => "index.html.haml", :method => "post", :name => "form"}
-              %label{:for => "token"} Token:
-              %input#token{:name => "token", :tabindex => "1", :type => "text"}/
-      .border
+          #vote
+            %form{:action => project_vote_path(project), :method => "post", :name => "vote"}
+              %label{:for => "token"} Your token please:
+              %input#token{:token => "name", :type => "text"}/
 %footer

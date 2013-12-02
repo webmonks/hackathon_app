@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-    @token = Token.all
   end
 
   def new
@@ -24,17 +23,18 @@ class ProjectsController < ApplicationController
     end
   end
 
-   def vote
+  def vote
     @project = Project.find(params[:project_id])
-       if @project.votes.where(:token).exists?
-         notice = 'You already voted'
-       else
-         @project.votes.create(:token, :voted => true)
-         notice = 'Vote recorded'
-       end
-       @project.tokens_count = @project.tokens.find_all { |c| c.voted == false} .count
-       redirect_to @project,  :method => :post
+    @token = @project.tokens.find(params[:id])
+      if @project.tokens.where(:token).exists?
+        notice = 'You already voted'
+      else
+        @project.tokens.create(:token, :voted => true)
+        notice = 'Vote recorded'
     end
+    @project.tokens_count = @project.tokens.find_all { |c| c.voted == false} .count
+    redirect_to @project,  :method => :post
+  end
 end
 
   private
