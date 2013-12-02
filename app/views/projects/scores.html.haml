@@ -14,5 +14,6 @@
         .col-md-7
           .project-description= project.description
         .col-md-2
+          #{project.tokens.where(voted: true).count()}
       .border
 %footer
