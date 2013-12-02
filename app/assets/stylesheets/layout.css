@@ -13,16 +13,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* Main */
 
-.container {
-  margin-top: 10px;
+.main {
+  background-color: #fe504f;
+  padding-bottom: 25px;
 }
 .content h3{
   display: inline-block;
 }
 .title h1{
   text-align: center;
-  color: #fe504f;
+  color: #fff;
   font-family: "Merriweather", serif;
+  padding-top: 10px;
 }
 
 .project {
@@ -30,8 +32,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .border {
-  border: 1px solid #fe504f;
+  border: 1px solid #3e3e3e;
   margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.projects-container {
+  margin-top: 150px;
 }
 /*Buttons and forms*/
 
@@ -47,8 +54,8 @@ a.btn, button.btn {
   color: #fe504f;
   background-color: white;
   border: 1px solid #fe504f;
-  padding: 15px 40px;
-  margin-bottom: 30px;
+  padding: 10px 30px;
+  margin-top: 5px;
   border-radius: 0;
   text-transform: uppercase;
   font-size: 14px;
@@ -78,9 +85,13 @@ background: #000;
 display: none;
 }
 #vote {
-width: 200px;
-display:none;
-background: #FFF;
+  text-align: center;
+  width: 700px;
+  display:none;
+  background: #FFF;
+  border: 1px solid #fe504f;
+  color: #fe504f;
+  padding-bottom: 10px;
 }
 
 .project-title{
@@ -94,5 +105,5 @@ background: #FFF;
 }
 
 .vote-button {
-  margin-top: -15px;
+  margin-top: -10px;
 }

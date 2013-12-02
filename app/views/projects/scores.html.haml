@@ -1,0 +1,18 @@
+!!!
+%html
+%header
+.container
+  %nav.navbar.navbar-default.navbar-fixed-top.main
+    .title
+      %h1*<:)> Xmas Rome Hackathon
+%main
+  .container.projects-container
+    - @projects.each do |project|
+      .row
+        .col-md-3
+          .project-title= project.name
+        .col-md-7
+          .project-description= project.description
+        .col-md-2
+      .border
+%footer

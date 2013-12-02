@@ -2,11 +2,11 @@
 %html
 %header
 .container
-  .title
-    %h1 Hackathon Rome
-  .border
+  %nav.navbar.navbar-default.navbar-fixed-top.main
+    .title
+      %h1*<:)> Xmas Rome Hackathon
 %main
-  .container
+  .container.projects-container
     - @projects.each do |project|
       .row
         .col-md-3
@@ -20,4 +20,7 @@
             %form{:action => project_vote_path(project), :method => "post", :name => "vote"}
               %label{:for => "token"} Your token please:
               %input#token{:token => "name", :type => "text"}/
+              %a.button.btn.btn-link vote
+              %a.button.btn.btn-link cancel
+      .border
 %footer

@@ -4,6 +4,7 @@ HackathonApp::Application.routes.draw do
     post 'vote' => 'projects#vote'
   end
   get '/hackproject' => 'projects#new'
+  get '/scores' => 'projects#scores'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
