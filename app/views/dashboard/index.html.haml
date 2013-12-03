@@ -17,7 +17,7 @@
           %a.button.btn.btn-link{:href => "#vote", :name => "vote", :rel => "leanModal"}
             vote
           #vote
-            %form{:action => project_vote_path(project), :method => "post", :name => "vote"}
+            %form{:action => vote_project_path(project), :method => "post", :name => "vote"}
               %label{:for => "token"} Your token please:
               %input#token{:token => "name", :type => "text"}/
               %a.button.btn.btn-link vote

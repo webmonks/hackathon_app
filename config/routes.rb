@@ -1,7 +1,9 @@
 HackathonApp::Application.routes.draw do
   root to: 'dashboard#index'
   resources :projects do
-    post 'vote' => 'projects#vote'
+    member do
+      post 'vote'
+    end
   end
   get '/hackproject' => 'projects#new'
   get '/scores' => 'projects#scores'

@@ -8,4 +8,11 @@ class Project
 
   has_many :tokens
 
+  def vote(token)
+    if token.project.not_used?
+      tokens << token
+      save!
+    end
+  end
+
 end

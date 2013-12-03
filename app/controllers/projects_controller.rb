@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
+
   def scores
     @projects = Project.all
   end
@@ -23,22 +24,18 @@ class ProjectsController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @project.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def vote
-    @project = Project.find(params[:project_id])
-    @token = @project.tokens.find(params[:id])
-      if @project.tokens.where(:token).exists?
-        notice = 'You already voted'
-      else
-        @project.tokens.create(:token, :voted => true)
-        notice = 'Vote recorded'
-    end
-    @project.tokens_count = @project.tokens.find_all { |c| c.voted == false} .count
-    redirect_to @project,  :method => :post
+    @project = Project.find(params[:id])
+    @token = Token.where(name: params[:token_name])
+
+    return if @token.blank?
+
+    @project.vote @token
   end
-end
 
   private
 

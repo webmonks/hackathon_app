@@ -9,4 +9,11 @@ class Token
 
   belongs_to :project
 
+  def not_used?
+    ! used?
+  end
+
+  def used?
+    project.present?
+  end
 end

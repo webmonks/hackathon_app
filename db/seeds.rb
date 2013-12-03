@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Token.destroy_all
+
+Token.create name: 'abc'
+Token.create name: 'cde'
+Token.create name: 'krk'

@@ -75,14 +75,14 @@ a.btn, button.btn {
 }
 
 #lean_overlay {
-position: fixed;
-z-index: 10000;
-top: 0px;
-left: 0px;
-height:100%;
-width:100%;
-background: #000;
-display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
 }
 #vote {
   text-align: center;
@@ -106,4 +106,9 @@ display: none;
 
 .vote-button {
   margin-top: -10px;
+}
+
+.scores {
+  color: #fe504f;
+  font-size: 24px;
 }
