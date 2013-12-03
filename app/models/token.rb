@@ -9,7 +9,7 @@ class Token
 
   belongs_to :project
 
-  def not_used?
+  def blank?
     ! used?
   end
 

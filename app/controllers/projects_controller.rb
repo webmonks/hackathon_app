@@ -31,10 +31,14 @@ class ProjectsController < ApplicationController
   def vote
     @project = Project.find(params[:id])
     @token = Token.where(name: params[:token_name])
-
-    return if @token.blank?
-
-    @project.vote @token
+    respond_to do |format|
+      if @token.blank?
+        return @project.vote @token
+        format.html {redirect_to root_path, notice: 'Hell yeah.' }
+      else
+        render 'index', notice: 'Hell no'
+      end
+    end
   end
 
   private

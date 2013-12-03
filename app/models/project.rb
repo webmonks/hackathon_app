@@ -9,7 +9,7 @@ class Project
   has_many :tokens
 
   def vote(token)
-    if token.project.not_used?
+    if token.blank?
       tokens << token
       save!
     end
