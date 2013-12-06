@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
       if @token.blank?
         @project.vote @token
         format.html {redirect_to root_path, notice: 'Hell yeah.' }
-
+        format.json {redirect_to root_path, notice: 'Hell yeah.'}
       else
         format.json { render json @token.errors}
       end

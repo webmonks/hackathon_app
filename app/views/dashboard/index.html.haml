@@ -18,9 +18,11 @@
             vote
 
             %form#vote{:action => vote_project_path(project), :method => "post", :name => "vote"}
+              %input#crftoken{:type => "hidden", :name => "csrf-param"}
               %label{:for => "token"} Your token please:
               %input#token{:token => "name", :type => "text"}/
               %a.button.btn.btn-link vote
               %a.button.btn.btn-link cancel
       .border
 %footer
+
