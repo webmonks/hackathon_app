@@ -33,10 +33,11 @@ class ProjectsController < ApplicationController
     @token = Token.where(name: params[:token_name])
     respond_to do |format|
       if @token.blank?
-        return @project.vote @token
+        @project.vote @token
         format.html {redirect_to root_path, notice: 'Hell yeah.' }
+
       else
-        render 'index', notice: 'Hell no'
+        format.json { render json @token.errors}
       end
     end
   end
