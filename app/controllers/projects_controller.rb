@@ -30,16 +30,14 @@ class ProjectsController < ApplicationController
 
   def vote
     @project = Project.find(params[:id])
-    @token = Token.where(name: params[:token_name])
-    respond_to do |format|
-      if @token.blank?
-        @project.vote @token
-        format.html {redirect_to root_path, notice: 'Hell yeah.' }
-        format.json {redirect_to root_path, notice: 'Hell yeah.'}
-      else
-        format.json { render json @token.errors}
+    @token = Token.where(name: params[:token_name]).first
+    binding.pry
+      if @token.present? && @project.vote(@token)
+        session[:has_voted] = true
+        flash[:notice]='ljkj'
       end
-    end
+
+      redirect_to root_path
   end
 
   private

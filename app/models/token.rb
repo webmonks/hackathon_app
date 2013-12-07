@@ -9,10 +9,6 @@ class Token
 
   belongs_to :project
 
-  def blank?
-    ! used?
-  end
-
   def used?
     project.present?
   end
