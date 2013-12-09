@@ -31,7 +31,6 @@ class ProjectsController < ApplicationController
   def vote
     @project = Project.find(params[:id])
     @token = Token.where(name: params[:token_name]).first
-    binding.pry
       if @token.present? && @project.vote(@token)
         session[:has_voted] = true
         flash[:notice]='ljkj'

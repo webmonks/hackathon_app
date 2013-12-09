@@ -11,3 +11,7 @@ Token.destroy_all
 Token.create name: 'abc'
 Token.create name: 'cde'
 Token.create name: 'krk'
+Token.create name: 'bla'
+Token.create name: 'qwe'
+Token.create name: 'asd'
+Token.create name: 'zxc'
