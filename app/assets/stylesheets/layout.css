@@ -84,7 +84,7 @@ a.btn, button.btn {
   background: #000;
   display: none;
 }
-#vote {
+.vote {
   text-align: center;
   width: 700px;
   display:none;
@@ -112,3 +112,23 @@ a.btn, button.btn {
   color: #fe504f;
   font-size: 24px;
 }
+
+
+.alert {
+  padding-top: 150px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 400px;
+  height: 30px;
+  margin-left: 600px;
+  text-align: right;
+}
+
+.alert-success {
+  background-color: #fff;
+  border-color: #fe504f;
+  color: #fe504f;
+}
+

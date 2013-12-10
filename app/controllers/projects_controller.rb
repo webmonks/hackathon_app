@@ -18,24 +18,21 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    respond_to do |format|
       if @project.save
-        format.html {redirect_to root_path, notice: 'New project was created.' }
+        redirect_to root_path, notice: 'New project was created.'
       else
-        format.html { render action: 'new' }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
-    end
   end
 
   def vote
     @project = Project.find(params[:id])
     @token = Token.where(name: params[:token_name]).first
       if @token.present? && @project.vote(@token)
+         binding.pry
         session[:has_voted] = true
-        flash[:notice]='ljkj'
+        flash[:notice]='Santa Claus has confirmed your vote:)!'
       end
-
       redirect_to root_path
   end
 

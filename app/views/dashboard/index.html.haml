@@ -15,11 +15,10 @@
           .project-description= project.description
         .col-md-2.vote-button
           - if session[:has_voted]
-            thx
           - else
-            %a.button.btn.btn-link{:href => "#vote", :name => "vote", :rel => "leanModal"}
+            %a.button.btn.btn-link{:href => "#vote#{project.id}", :name => "vote", :rel => "leanModal"}
               vote
-            #vote
+            %div.vote{id: "vote#{project.id}"}
               %form{:action => vote_project_path(project), :method => "post", :name => "vote"}
                 %input#crftoken{:type => "hidden", :name => "authenticity_token"}
                 %label{:for => "token"} Your token please:

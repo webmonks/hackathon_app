@@ -15,3 +15,11 @@ Token.create name: 'bla'
 Token.create name: 'qwe'
 Token.create name: 'asd'
 Token.create name: 'zxc'
+
+
+Project.destroy_all
+
+Project.create name: 'kra', description: 'lkdsjkdsa'
+Project.create name: 'zxc', description: 'sadsadsaads'
+Project.create name: 'bla', description: 'buu'
+Project.create name: 'acb', description: 'lkdsjkdsa'

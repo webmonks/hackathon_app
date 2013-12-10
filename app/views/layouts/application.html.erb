@@ -14,7 +14,8 @@
   <link href="/assets/layout.css" rel="stylesheet" />
 </head>
 <body>
-<div><%= flash[:notice] %></div>
+
+  <%= render 'layouts/messages' %>
 <%= yield %>
 
 </body>
