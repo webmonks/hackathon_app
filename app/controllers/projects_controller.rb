@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
       if @token.present? && @project.vote(@token)
          binding.pry
         session[:has_voted] = true
-        flash[:notice]='Santa Claus has confirmed your vote:)!'
+        flash[:notice]='Santa Claus has confirmed your vote :) !'
       end
       redirect_to root_path
   end
