@@ -13,7 +13,8 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'haml-rails'
 gem "simple_form"
-
+gem "barby"
+gem "chunky_png"
 
 group :development, :test do
   gem 'better_errors'

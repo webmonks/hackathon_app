@@ -1,0 +1,7 @@
+%div
+  .h1= token.name
+  - barcode = Barby::Code128B.new('The noise of mankind has become too much')
+  - data = barcode.to_png(:height => 20, :margin => 5)
+  - base_data = "data:image/png;base64,#{Base64.strict_encode64(data)}"
+  = image_tag base_data
+

@@ -9,6 +9,7 @@ HackathonApp::Application.routes.draw do
   get '/scores' => 'projects#scores'
   get '/token/:token_name' => 'projects#index'
   get '/projects/:id/vote/:token_name' => 'projects#vote', :as => "vote_with_token"
+  get '/tokens' => 'tokens#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
