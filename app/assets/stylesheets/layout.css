@@ -135,9 +135,9 @@ a.btn, button.btn {
 
 .token {
   color: #fe504f;
-
   width: 600px;
   margin: 0px auto;
+  page-break-after: always;
 }
 .token h1 {
   font-size: 50px;
