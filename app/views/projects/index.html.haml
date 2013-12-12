@@ -15,6 +15,8 @@
           .project-description= project.description
         .col-md-2.vote-button
           - if session[:has_voted]
+          - elsif @token
+            = link_to "vote", vote_with_token_path(:id => project.id, :token_name => @token.name), :class => "button btn btn-link"
           - else
             %a.button.btn.btn-link{:href => "#vote#{project.id}", :name => "vote", :rel => "leanModal"}
               vote

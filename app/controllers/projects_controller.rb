@@ -2,6 +2,10 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    if params[:token_name]
+      token = Token.where(name: params[:token_name]).first
+      @token = token if token.present? && !token.used?
+    end
   end
 
   def scores

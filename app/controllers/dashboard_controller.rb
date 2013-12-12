@@ -1,6 +1,6 @@
-class DashboardController < ApplicationController
+# class DashboardController < ApplicationController
 
-  def index
-    @projects = Project.all
-  end
-end
+#   def index
+#     @projects = Project.all
+#   end
+# end
