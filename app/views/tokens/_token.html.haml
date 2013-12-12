@@ -1,7 +1,7 @@
 %div
-  .h1= token.name
   - barcode = Barby::QrCode.new(index_with_token_url(token_name: token.name))
   - data = barcode.to_png(xdim: 20, ydim: 20 )
   - base_data = "data:image/png;base64,#{Base64.strict_encode64(data)}"
   = image_tag base_data
+  %h1= token.name
 
