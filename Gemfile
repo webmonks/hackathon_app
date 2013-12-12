@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem "simple_form"
 gem "barby"
 gem "chunky_png"
+gem 'rqrcode'
 
 group :development, :test do
   gem 'better_errors'
