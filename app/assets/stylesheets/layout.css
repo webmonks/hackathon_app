@@ -72,6 +72,8 @@ a.btn, button.btn {
 .form {
   text-align: center;
   display: inline-block;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 #lean_overlay {
@@ -120,7 +122,7 @@ a.btn, button.btn {
   border-radius: 4px;
   max-width: 400px;
   height: 30px;
-  margin-left: 600px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -141,4 +143,6 @@ a.btn, button.btn {
 }
 .token h1 {
   font-size: 50px;
+  text-align: center;
+  padding: 20px;
 }

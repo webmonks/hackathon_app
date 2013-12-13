@@ -1,6 +1,6 @@
-.row-fluid
+.container
   .form
     = simple_form_for @project, url: {action: "create"}, :html => {:class => "form-vertical"} do |f|
-      = f.input :name, as: :text, input_html: { cols: 40 }
-      = f.input :description, as: :text, input_html: { cols: 50, rows: 3 }
+      = f.input :name, as: :text, input_html: { cols: 50 }
+      = f.input :description, as: :text, input_html: { cols: 100, rows: 10 }
       = f.button :submit, :class => "btn btn-primary"
