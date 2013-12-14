@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
   before_filter :check_password, except: [:vote, :index, :scores]
 
   def index
+    redirect_to scores_path unless voting_in_progress?
+
     @projects = Project.all.shuffle
     if params[:token_name]
       token = Token.where(name: params[:token_name]).first
@@ -48,6 +50,10 @@ class ProjectsController < ApplicationController
 
     def project_params
       params.require(:project).permit(:name, :description )
+    end
+
+    def voting_in_progress?
+      File.exists? Rails.root.join "tmp/voting_in_progress"
     end
 end
 
