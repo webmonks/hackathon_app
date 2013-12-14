@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :check_password, except: [:vote, :index]
+  before_filter :check_password, except: [:vote, :index, :scores]
 
   def index
     @projects = Project.all.shuffle
@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
 
   def scores
-    @projects = Project.all
+    @projects = Project.all.sort_by{|p| - p.tokens.count}
   end
 
   def new
