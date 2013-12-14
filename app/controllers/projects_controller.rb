@@ -1,7 +1,8 @@
 class ProjectsController < ApplicationController
+  before_filter :check_password, except: [:vote, :index]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.shuffle
     if params[:token_name]
       token = Token.where(name: params[:token_name]).first
       @token = token if token.present? && !token.used?
@@ -33,7 +34,6 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @token = Token.where(name: params[:token_name]).first
       if @token.present? && @project.vote(@token)
-         binding.pry
         session[:has_voted] = true
         flash[:notice]='Santa Claus has confirmed your vote :) !'
       end

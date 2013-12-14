@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #fff;
   font-family: "Merriweather", serif;
   padding-top: 10px;
+  font-weight: bold;
 }
 
 .project {
@@ -32,12 +33,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .border {
-  border: 1px solid #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
   margin-bottom: 40px;
   margin-top: 30px;
 }
 
 .projects-container {
+  text-align: center;
   margin-top: 150px;
 }
 /*Buttons and forms*/
@@ -88,7 +90,7 @@ a.btn, button.btn {
 }
 .vote {
   text-align: center;
-  width: 700px;
+  width: 90%;
   display:none;
   background: #FFF;
   border: 1px solid #fe504f;
@@ -107,7 +109,7 @@ a.btn, button.btn {
 }
 
 .vote-button {
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .scores {
@@ -139,7 +141,6 @@ a.btn, button.btn {
   color: #fe504f;
   width: 600px;
   margin: 0px auto;
-  page-break-after: always;
 }
 .token h1 {
   font-size: 50px;
