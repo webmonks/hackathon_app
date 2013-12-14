@@ -6,7 +6,7 @@ HackathonApp::Application.routes.draw do
     end
   end
   get '/hackproject' => 'projects#new'
-  get '/scores' => 'projects#scores'
+  get '/scores' => 'projects#scores', as: "scores"
   get '/token/:token_name' => 'projects#index', :as => "index_with_token"
   get '/projects/:id/vote/:token_name' => 'projects#vote', :as => "vote_with_token"
   get '/tokens' => 'tokens#index'

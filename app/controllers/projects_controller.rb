@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
         session[:has_voted] = true
         flash[:notice]='Santa Claus has confirmed your vote :) !'
       end
-      redirect_to root_path
+      redirect_to scores_path
   end
 
   private
