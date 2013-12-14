@@ -1,7 +1,10 @@
 %div.token
-  - barcode = Barby::QrCode.new(index_with_token_url(token_name: token.name))
-  - data = barcode.to_png(xdim: 5, ydim: 5)
-  - base_data = "data:image/png;base64,#{Base64.strict_encode64(data)}"
-  = image_tag base_data, style: 'float:left'
+  - cache_path = Rails.root.join("tmp/cache/token_#{token.name}")
+  - unless File.exists? cache_path
+    - barcode = Barby::QrCode.new(index_with_token_url(token_name: token.name))
+    - data = barcode.to_png(xdim: 5, ydim: 5)
+    - base_data = "data:image/png;base64,#{Base64.strict_encode64(data)}"
+    - File.open(cache_path, 'w'){|f| f.write(base_data)}
+  = image_tag  File.read(cache_path), style: 'float:left'
   %div{style: 'float:left;'}= token.name
 
