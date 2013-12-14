@@ -139,11 +139,12 @@ a.btn, button.btn {
 
 .token {
   color: #fe504f;
-  width: 600px;
-  margin: 0px auto;
+  width: 150px;
+  margin: 10px 13px;
+  float: left;
 }
-.token h1 {
-  font-size: 50px;
+.token p {
+  font-size: 25px;
   text-align: center;
-  padding: 20px;
+  margin-left: 15px;
 }
