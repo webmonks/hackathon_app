@@ -20,12 +20,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .content h3{
   display: inline-block;
 }
-.title h1{
+.title h1 {
   text-align: center;
   color: #fff;
   font-family: "Merriweather", serif;
   padding-top: 10px;
   font-weight: bold;
+  font-size: 27px;
 }
 
 .project {
