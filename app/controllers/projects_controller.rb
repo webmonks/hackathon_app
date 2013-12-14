@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
     redirect_to scores_path unless voting_in_progress?
+    redirect_to scores_path if session[:has_voted] 
 
     @projects = Project.all.shuffle
     if params[:token_name]
